@@ -1,1 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Aleen Fernando | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: linear-gradient(135deg, #000000 0%, #0f172a 50%, #064e3b 100%);
+            color: #ffffff;
+        }
+
+        .glass-card {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+        }
+
+        .neon-border {
+            box-shadow: 
+                0 0 0 3px rgba(34, 197, 94, 0.😎,
+                0 0 25px rgba(59, 130, 246, 0.5);
+        }
+
+        .text-gradient {
+            background: linear-gradient(90deg, #3b82f6, #22c55e, #3b82f6);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientShift 3s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% center; }
+            50% { background-position: 100% center; }
+            100% { background-position: 0% center; }
+        }
+
+        .btn-neon {
+            background: linear-gradient(135deg, #3b82f6, #22c55e);
+            box-shadow: 0 0 15px rgba(34, 197, 94, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .btn-neon:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.7);
+        }
+
+        .skill-bar {
+            background: rgba(30, 41, 59, 0.8);
+            border-radius: 9999px;
+            height: 10px;
+            overflow: hidden;
+        }
+
+        .skill-fill {
+            background: linear-gradient(90deg, #3b82f6, #22c55e);
+            height: 100%;
+            border-radius: 9999px;
+            transition: width 1s ease-in-out;
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background: linear-gradient(90deg, #3b82f6, #22c55e);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #3b82f6, #22c55e);
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 glass-card z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gradient">John Aleen.</a>
+            <div class="hidden md:flex gap-8">
+                <a href="#home" class="nav-link text-gray-300 hover:text-white font-medium">Home</a>
+                <a href="#about" class="nav-link text-gray-300 hover:text-white font-medium">About</a>
+                <a href="#skills" class="nav-link text-gray-300 hover:text-white font-medium">Skills</a>
+                <a href="#projects" class="nav-link text-gray-300 hover:text-white font-medium">Projects</a>
+                <a href="#services" class="nav-link text-gray-300 hover:text-white font-medium">Services</a>
+                <a href="#contact" class="nav-link text-gray-300 hover:text-white font-medium">Contact</a>
+            </div>
+            <button class="md:hidden text-gray-300 text-xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="min-h-screen flex items-center pt-20">
+        <div class="max-w-7xl mx-auto px-6 py-16 w-full">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12 fade-in">
+                <div class="text-center md:text-left md:w-1/2">
+                    <h1 class="text-5xl md:text-6xl font-bold mb-4">
+                        Hi, I'm <span class="text-gradient">John Aleen Fernando</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold text-emerald-400 mb-6">
+                        IT Student & Aspiring Web Developer
+                    </h2>
+                    <p class="text-lg text-gray-400 mb-8 max-w-lg">
+                        I build clean, responsive, and modern websites. I love turning ideas into interactive digital experiences.
+                    </p>
+                    <a href="#projects" class="btn-neon inline-block text-white font-semibold px-8 py-3 rounded-full">
+                        View My Work
+                    </a>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <img 
+                            src="profile.jpg" 
+                            alt="John Aleen Fernando"
+                            class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover neon-border"
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 section-title mx-auto">About Me</h2>
+            <div class="max-w-3xl mx-auto glass-card p-10 rounded-2xl text-center text-gray-300 text-lg leading-relaxed">
+                <p class="mb-4">Hello! I'm John Aleen Fernando, a dedicated IT student from Brgy. Tampalon, Kabankalan City. I'm passionate about technology, web development, and everything digital.</p>
+                <p class="mb-4">My journey in IT started with curiosity about how websites and systems work. Now, I'm learning to build them myself — from simple web pages to small functional systems. I believe that anyone can learn to code as long as they stay patient and keep practicing.</p>
+                <p>My goal is to become a skilled developer who can create useful websites and applications. I'm not an expert yet, but I'm committed to improving every single day. Thanks for visiting my portfolio! 🚀</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 section-title mx-auto">My Skills</h2>
+            <div class="max-w-2xl mx-auto glass-card p-10 rounded-2xl space-y-8">
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <span class="font-semibold text-gray-300">HTML & CSS</span>
+                        <span class="text-emerald-400 font-medium">80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 80%"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <span class="font-semibold text-gray-300">JavaScript</span>
+                        <span class="text-emerald-400 font-medium">55%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 55%"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <span class="font-semibold text-gray-300">C++ / Programming Basics</span>
+                        <span class="text-emerald-400 font-medium">65%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 65%"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <span class="font-semibold text-gray-300">Graphic Design</span>
+                        <span class="text-emerald-400 font-medium">70%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 70%"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex justify-between mb-2">
+                        <span class="font-semibold text-gray-300">Problem Solving</span>
+                        <span class="text-emerald-400 font-medium">75%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-fill" style="width: 75%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 section-title mx-auto">My Projects</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-6 rounded-2xl hover:shadow-lg transition-shadow">
+                    <h3 class="text-xl font-semibold mb-2 text-white">Personal Portfolio</h3>
+                    <p class="text-gray-400 mb-4">My first portfolio website using HTML and CSS.</p>
+                    <a href="#" class="text-emerald-400 font-medium hover:text-blue-400">View Project →</a>
+                </div>
+                <div class="glass-card p-6 rounded-2xl hover:shadow-lg transition-shadow">
+                    <h3 class="text-xl font-semibold mb-2 text-white">CampusSync</h3>
+                    <p class="text-gray-400 mb-4">Student resource portal — capstone project.</p>
+                    <a href="#" class="text-emerald-400 font-medium hover:text-blue-400">View Project →</a>
+                </div>
+                <div class="glass-card p-6 rounded-2xl hover:shadow-lg transition-shadow">
+                    <h3 class="text-xl font-semibold mb-2 text-white">School Management</h3>
+                    <p class="text-gray-400 mb-4">Simple system built with C++.</p>
+                    <a href="#" class="text-emerald-400 font-medium hover:text-blue-400">View Project →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 section-title mx-auto">What I Do</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-2xl text-center hover:shadow-lg transition-shadow">
+                    <i class="fas fa-code text-4xl text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-white">Web Development</h3>
+                    <p class="text-gray-400">Building simple and responsive websites.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl text-center hover:shadow-lg transition-shadow">
+                    <i class="fas fa-paint-brush text-4xl text-green-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-white">UI/UX Design</h3>
+                    <p class="text-gray-400">Clean and user-friendly designs.</p>
+                </div>
+                <div class="glass-card p-8 rounded-2xl text-center hover:shadow-lg transition-shadow">
+                    <i class="fas fa-laptop-code text-4xl text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2 text-white">Basic Programming</h3>
+                    <p class="text-gray-400">Learning and practicing code daily.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16 section-title mx-auto">Get In Touch</h2>
+            <div class="max-w-xl mx-auto glass-card p-10 rounded-2xl text-center space-y-6">
+                <p class="text-lg text-gray-300">Let's work on something together!</p>
+                <div class="flex flex-col gap-4 items-center">
+                    <a href="mailto:johnalenfernado9@email.com" class="flex items-center gap-3 text-gray-400 hover:text-emerald-400">
+                        <i class="fas fa-envelope"></i> johnalenfernado9@email.com
+                    </a>
+                    <a href="#" class="flex items-center gap-3 text-gray-400 hover:text-emerald-400">
+                        <i class="fas fa-map-marker-alt"></i> Brgy. Tampalon, Kabankalan City, Negros Occidental
+                    </a>
+                    <a href="#" class="flex items-center gap-3 text-gray-400 hover:text-emerald-400">
+                        <i class="fas fa-phone"></i> +63 992 157 8963
+                    </a>
+                    <a href="#" class="flex items-center gap-3 text-gray-400 hover:text-emerald-400">
+                        <i class="fab fa-github"></i> github.com/your-username
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-gray-800">
+        <div class="text-center text-gray-500">
+            <p>&copy; 2026 John Aleen Fernando. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
 
